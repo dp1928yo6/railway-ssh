@@ -1,0 +1,6 @@
+# Keep shell scripts LF even when the repo is cloned on Windows.
+*.sh                    text eol=lf
+Dockerfile              text eol=lf
+sshd_config             text eol=lf
+*.yml                   text eol=lf
+*.json                  text eol=lf

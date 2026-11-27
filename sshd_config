@@ -1,0 +1,27 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+ListenAddress 0.0.0.0
+ListenAddress ::
+
+PermitRootLogin prohibit-password
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+UsePAM no
+
+UseDNS no
+PrintMotd yes
+PrintLastLog no
+TCPKeepAlive yes
+ClientAliveInterval 30
+ClientAliveCountMax 6
+MaxAuthTries 6
+LoginGraceTime 60
+
+AllowTcpForwarding yes
+X11Forwarding no
+AcceptEnv LANG LC_*
+
+Subsystem sftp internal-sftp
